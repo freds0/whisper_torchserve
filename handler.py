@@ -50,7 +50,7 @@ class WhisperHandler(BaseHandler):
         self.device = self.model.device
         self.option = DecodingOptions(
             task="transcribe",
-            language="en",
+            language="pt",
             temperature=0.0,
             prompt=[],
             without_timestamps=False,

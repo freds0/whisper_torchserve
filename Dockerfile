@@ -2,7 +2,7 @@ FROM mwader/static-ffmpeg:5.1.2 AS ffmpeg_image
 
 FROM pytorch/torchserve-nightly:cpu-2022.10.18
 
-ARG MODELTYPE=base.en
+ARG MODELTYPE=base
 ENV MODELNAME=whisper_base
 
 COPY --from=ffmpeg_image /ffmpeg /usr/local/bin/

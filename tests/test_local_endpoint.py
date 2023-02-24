@@ -3,7 +3,7 @@ import requests
 
 @pytest.mark.integration
 def test_send_real_request(start2serve):
-    with open("tests/jfk.flac", "rb") as f:
+    with open("tests/rocky.wav", "rb") as f:
         audio_bytes = f.read()
 
     res = requests.post(
@@ -11,6 +11,5 @@ def test_send_real_request(start2serve):
         files={"data": audio_bytes})
     assert res.status_code == 200
     transcription =  res.text.lower()
-    assert "my fellow americans" in transcription
-    assert "your country" in transcription
-    assert "do for you" in transcription
+    assert "eu vou dizer uma coisa que você já sabe" in transcription
+    assert "o mundo não é um grande arcoírus." in transcription
