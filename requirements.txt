@@ -1,3 +1,9 @@
 ffmpeg-python==0.2.0
+more-itertools
+numpy
+nvgpu
 pytest
 torch
+torchserve
+tqdm
+transformers
