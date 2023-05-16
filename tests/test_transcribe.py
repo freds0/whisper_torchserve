@@ -33,4 +33,4 @@ def test_transcribe_base_en():
 
     transcription = result["text"].lower()
     assert "eu vou dizer uma coisa que você já sabe" in transcription
-    assert "o mundo não é um grande arcoírus." in transcription
+    assert "o mundo não é um grande arco-íris" in transcription

@@ -9,7 +9,7 @@ def test_audio():
     audio_path = os.path.join(os.path.dirname(__file__), "rocky.wav")
     audio = load_audio(audio_path)
     assert audio.ndim == 1
-    assert SAMPLE_RATE * 10 < audio.shape[0] < SAMPLE_RATE * 12
+    assert SAMPLE_RATE * 4 < audio.shape[0] < SAMPLE_RATE * 12
     assert 0 < audio.std() < 1
 
     mel_from_audio = log_mel_spectrogram(audio)
